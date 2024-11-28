@@ -17,7 +17,7 @@ public class SimpleGoogleSearchAutomation {
 		when automating tasks in the Google Chrome browser. 
 		*/
 		
-		WebDriver driver =new ChromeDriver();  // Selenium will launch a new Google Chrome browser window.
+		WebDriver driver =new ChromeDriver();  // selenium will launch a new Google Chrome browser window.
 		/*
 		 Creates an instance of the WebDriver interface using the ChromeDriver class. 
 		 This is how you initialize a WebDriver object that will control the Chrome browser.
