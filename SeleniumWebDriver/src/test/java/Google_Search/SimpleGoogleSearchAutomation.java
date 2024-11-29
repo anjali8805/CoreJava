@@ -73,6 +73,7 @@ public class SimpleGoogleSearchAutomation {
 		
 		catch(Exception e) {  //handles any exception
 			System.out.println("error found" + e.getMessage());
+			e.printStackTrace();
 		}
 		finally {
 			driver.quit();
