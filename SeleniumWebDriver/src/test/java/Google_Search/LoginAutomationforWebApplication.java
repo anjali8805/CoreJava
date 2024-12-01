@@ -25,7 +25,7 @@ public class LoginAutomationforWebApplication {
 		 Creates an instance of the WebDriver interface using the ChromeDriver class. 
 		 This is how you initialize a WebDriver object that will control the Chrome browser.
 		 */
-		WebDriverWait wait = new WebDriverWait (driver, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait (driver, Duration.ofSeconds(10));
 		// Create WebDriverWait instance with a timeout of 10 seconds
 		try {
 			driver.navigate().to("https://www.saucedemo.com/");//The browser will automatically load https://www.saucedemo.com/
@@ -47,7 +47,7 @@ public class LoginAutomationforWebApplication {
             loginButton.click();
 
             // Verify if the login was successful (Check for the inventory page)
-            WebElement inventoryHeader = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("product_label")));
+            WebElement inventoryHeader = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[normalize-space()='Sauce Labs Backpack']")));
             if (inventoryHeader.isDisplayed()) {
                 System.out.println("Login successful!");
             } else {
@@ -64,9 +64,4 @@ public class LoginAutomationforWebApplication {
 			
 		}
 					
-		
-		
-		
-
-	
 }
